@@ -1,6 +1,6 @@
 package by.it.lomazki.dmdev.oopLesson15;
 
-public class Hero {
+public abstract class Hero {
     private String name;
     private int canDamage;
 
@@ -13,10 +13,7 @@ public class Hero {
         this.canDamage = canDamage;
     }
 
-    void attackEnemy(Enemy enemy) {
-        System.out.println(name + "attack" + enemy.getName());
-        enemy.takeDamage(canDamage);
-    }
+    abstract void attackEnemy(Enemy enemy);
 
     public int getCanDamage() {
         return canDamage;

@@ -11,9 +11,11 @@ public class TrainingGround {
         attackEnemy(enemy, warrior, archer, mag);
     }
 
-    public static void attackEnemy (Enemy enemy, Hero... heroes){
-        for (Hero hero : heroes) {
-            hero.attackEnemy(enemy);
+    public static void attackEnemy(Enemy enemy, Hero... heroes) {
+        while (enemy.isAlive()){
+            for (Hero hero : heroes) {
+                hero.attackEnemy(enemy);
+            }
         }
     }
 

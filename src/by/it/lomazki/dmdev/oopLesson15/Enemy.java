@@ -1,6 +1,6 @@
 package by.it.lomazki.dmdev.oopLesson15;
 
-public class Enemy {
+public class Enemy implements Mortal{
     private int health;
     private String name;
 
@@ -14,6 +14,11 @@ public class Enemy {
         System.out.println(name + " Take a damage " + damage +". It alive on " + getHealth());
     }
 
+    @Override
+    public boolean isAlive() {
+        return this.health > 0;
+    }
+
     public int getHealth() {
         return health;
     }
@@ -25,7 +30,5 @@ public class Enemy {
     public void setHealth(int health) {
         this.health = health;
     }
-
-
 
 }
